@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import logoLuna from "@/assets/logo-luna.png";
 
 const Footer = () => {
@@ -10,16 +11,12 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+            <Link
+              to="/"
               className="inline-block mb-4"
             >
               <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
-            </a>
+            </Link>
             <p className="text-primary-foreground/70 max-w-md mb-6">
               Ndërtime shtëpish dhe vilash nga themeli deri në çelës. 
               Cilësi, korrektësi dhe besim.
@@ -31,29 +28,29 @@ const Footer = () => {
             <h4 className="font-heading font-bold mb-4">Lidhje të Shpejta</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#sherbime" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                <Link to="/sherbime" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
                   Shërbimet
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#punimet" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                <Link to="/punimet" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
                   Punimet
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#pse-ne" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                <Link to="/pse-ne" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
                   Pse Ne
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#rreth-nesh" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                <Link to="/rreth-nesh" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
                   Rreth Nesh
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#kontakt" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                <Link to="/kontakt" className="text-primary-foreground/70 hover:text-construction-gold transition-colors">
                   Kontakt
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

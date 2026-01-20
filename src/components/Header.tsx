@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoLuna from "@/assets/logo-luna.png";
 
 interface HeaderProps {
@@ -10,6 +11,8 @@ interface HeaderProps {
 const Header = ({ isDark, toggleTheme }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +23,11 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
   }, []);
 
   const navLinks = [
-    { href: "#sherbime", label: "Shërbimet" },
-    { href: "#punimet", label: "Punimet" },
-    { href: "#pse-ne", label: "Pse Ne" },
-    { href: "#rreth-nesh", label: "Rreth Nesh" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/sherbime", label: "Shërbimet" },
+    { href: "/punimet", label: "Punimet" },
+    { href: "/pse-ne", label: "Pse Ne" },
+    { href: "/rreth-nesh", label: "Rreth Nesh" },
+    { href: "/kontakt", label: "Kontakt" },
   ];
 
   return (
@@ -38,38 +41,36 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
       <div className="container-custom section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+          <Link
+            to="/"
             className="flex items-center gap-3"
           >
             <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="font-medium text-sm hover:text-construction-gold transition-colors"
+                to={link.href}
+                className={`font-medium text-sm hover:text-construction-gold transition-colors ${
+                  location.pathname === link.href ? 'text-construction-gold' : ''
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <a
-              href="#kontakt"
+            <Link
+              to="/kontakt"
               className="hidden sm:inline-flex btn-secondary text-sm"
             >
               Na Kontaktoni
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -84,25 +85,27 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in bg-background/95 backdrop-blur-md rounded-lg px-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-medium hover:text-construction-gold transition-colors"
+                  className={`font-medium hover:text-construction-gold transition-colors ${
+                    location.pathname === link.href ? 'text-construction-gold' : ''
+                  }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#kontakt"
+              <Link
+                to="/kontakt"
                 onClick={() => setIsMenuOpen(false)}
                 className="btn-secondary text-center mt-2"
               >
                 Na Kontaktoni
-              </a>
+              </Link>
             </div>
           </nav>
         )}
