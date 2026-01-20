@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const PseNe = () => {
   return (
@@ -10,6 +11,7 @@ const PseNe = () => {
         <WhyChooseUs />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

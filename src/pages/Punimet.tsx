@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Import gallery images
 import gallery1 from "@/assets/gallery-1.jpg";
@@ -34,6 +35,7 @@ const Punimet = () => {
         <Gallery images={galleryImages} />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

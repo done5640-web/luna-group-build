@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Import gallery images
 import gallery1 from "@/assets/gallery-1.jpg";
@@ -46,6 +47,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import About from "@/components/About";
 import Process from "@/components/Process";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const RrethNesh = () => {
   return (
@@ -12,6 +13,7 @@ const RrethNesh = () => {
         <Process />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Sherbime = () => {
   return (
@@ -10,6 +11,7 @@ const Sherbime = () => {
         <Services />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
