@@ -31,11 +31,6 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     { href: "/kontakt", label: "Kontakt" },
   ];
 
-  const handleNavClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
@@ -50,7 +45,6 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           <Link
             to="/"
             className="flex items-center gap-3"
-            onClick={handleNavClick}
           >
             <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
             <div className="flex flex-col leading-tight">
@@ -65,7 +59,6 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
               <Link
                 key={link.href}
                 to={link.href}
-                onClick={handleNavClick}
                 className={`font-medium text-sm hover:text-construction-gold transition-colors ${
                   location.pathname === link.href ? 'text-construction-gold' : ''
                 }`}
@@ -103,7 +96,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  onClick={handleNavClick}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`font-medium hover:text-construction-gold transition-colors ${
                     location.pathname === link.href ? 'text-construction-gold' : ''
                   }`}
@@ -111,13 +104,6 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/kontakt"
-                onClick={handleNavClick}
-                className="btn-secondary text-center mt-2"
-              >
-                Na Kontaktoni
-              </Link>
             </div>
           </nav>
         )}
