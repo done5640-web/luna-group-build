@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+    <section className="relative min-h-[100vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-4 md:pt-0">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-construction-gold/5" />
       
@@ -18,27 +18,34 @@ const Hero = () => {
         backgroundSize: '60px 60px'
       }} />
 
-      <div className="container-custom section-padding relative z-10">
+      <div className="container-custom section-padding relative z-10 !pt-24">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Company Name */}
+          <div className="mb-4 animate-fade-up">
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-construction-gold">
+              Luna Group Construction
+            </h2>
+          </div>
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted mb-8 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted mb-6 animate-fade-up">
             <Building2 className="w-4 h-4 text-construction-gold" />
             <span className="text-sm font-medium">Ndërtim Profesional</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-heading font-black mb-8 animate-fade-up px-4" style={{ animationDelay: "0.05s" }}>
+          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-heading font-black mb-6 animate-fade-up px-4" style={{ animationDelay: "0.05s" }}>
             Ndërtime Shtëpish
             <span className="block text-gold-gradient">&amp; Vilash</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up px-4" style={{ animationDelay: "0.1s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up px-4" style={{ animationDelay: "0.1s" }}>
             Cilësi, korrektësi, besim. Nga themeli deri në çelës.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up px-4" style={{ animationDelay: "0.15s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up px-4 mb-8" style={{ animationDelay: "0.15s" }}>
             <Link to="/kontakt" className="btn-secondary w-full sm:w-auto">
               Na Kontaktoni
               <ArrowRight className="w-5 h-5" />

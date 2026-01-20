@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface GalleryProps {
   images: string[];
@@ -13,6 +13,20 @@ const Gallery = ({ images }: GalleryProps) => {
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const openModal = (src: string) => {
+    setModalImage(src);
+    setModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    document.body.style.overflow = 'unset';
+  };
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -43,6 +57,22 @@ const Gallery = ({ images }: GalleryProps) => {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi]);
+
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && modalOpen) {
+        closeModal();
+      }
+    };
+
+    if (modalOpen) {
+      document.addEventListener('keydown', handleEscKey);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, [modalOpen]);
 
   const captions = [
     "Punime themeli",
@@ -78,7 +108,10 @@ const Gallery = ({ images }: GalleryProps) => {
                   key={index}
                   className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-4"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl group">
+                  <div
+                    className="relative aspect-[4/3] overflow-hidden rounded-xl group cursor-pointer"
+                    onClick={() => openModal(src)}
+                  >
                     <img
                       src={src}
                       alt={captions[index] || `Projekt ${index + 1}`}
@@ -129,6 +162,28 @@ const Gallery = ({ images }: GalleryProps) => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <button
+            onClick={closeModal}
+            className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+          <img
+            src={modalImage}
+            alt="Gallery image"
+            className="max-w-full max-h-[90vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
