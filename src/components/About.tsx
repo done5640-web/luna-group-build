@@ -1,4 +1,8 @@
 import { Building2, Target, Users } from "lucide-react";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
 
 const About = () => {
   return (
@@ -61,22 +65,28 @@ const About = () => {
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="aspect-[3/4] rounded-2xl bg-muted overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-construction-gold/20 to-primary/20 flex items-center justify-center">
-                  <Building2 className="w-16 h-16 text-muted-foreground/30" />
-                </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden">
+                <img
+                  src={gallery1}
+                  alt="Luna Group Construction Project"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="aspect-square rounded-2xl bg-muted overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-construction-gold/20 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-muted-foreground/30" />
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src={gallery2}
+                  alt="Luna Group Construction Project"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div className="aspect-square rounded-2xl bg-muted overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-construction-gold/20 to-primary/20 flex items-center justify-center">
-                  <Target className="w-12 h-12 text-muted-foreground/30" />
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src={gallery3}
+                  alt="Luna Group Construction Project"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="aspect-[3/4] rounded-2xl gold-gradient flex items-center justify-center">
                 <div className="text-center text-foreground">
