@@ -1,4 +1,4 @@
-import { MessageSquare, Layers, Building, Paintbrush, Key } from "lucide-react";
+import { MessageSquare, Layers, Building, Paintbrush } from "lucide-react";
 
 const steps = [
   {
@@ -24,12 +24,6 @@ const steps = [
     number: "04",
     title: "Rifinitura",
     description: "Përfundojmë detajet e brendshme dhe të jashtme."
-  },
-  {
-    icon: Key,
-    number: "05",
-    title: "Dorëzim 'Çelësa në Dorë'",
-    description: "Ju dorëzojmë shtëpinë tuaj gati për të jetuar."
   }
 ];
 
@@ -55,7 +49,7 @@ const Process = () => {
           {/* Connection Line - Desktop */}
           <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-border" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={step.number} className="relative text-center">
                 {/* Icon */}
