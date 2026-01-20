@@ -38,6 +38,13 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
     setIsMenuOpen(false);
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
@@ -51,6 +58,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           {/* Logo */}
           <Link
             to="/"
+            onClick={handleLogoClick}
             className="flex items-center gap-3"
           >
             <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
