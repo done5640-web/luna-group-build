@@ -23,12 +23,18 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
   }, []);
 
   const navLinks = [
+    { href: "/", label: "Kreu" },
     { href: "/sherbime", label: "Shërbimet" },
     { href: "/punimet", label: "Punimet" },
     { href: "/pse-ne", label: "Pse Ne" },
     { href: "/rreth-nesh", label: "Rreth Nesh" },
     { href: "/kontakt", label: "Kontakt" },
   ];
+
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -44,8 +50,13 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
           <Link
             to="/"
             className="flex items-center gap-3"
+            onClick={handleNavClick}
           >
             <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
+            <div className="flex flex-col leading-tight">
+              <span className="font-heading font-bold text-lg text-foreground">Luna Group</span>
+              <span className="font-heading font-bold text-sm text-construction-gold">Construction</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,6 +65,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
               <Link
                 key={link.href}
                 to={link.href}
+                onClick={handleNavClick}
                 className={`font-medium text-sm hover:text-construction-gold transition-colors ${
                   location.pathname === link.href ? 'text-construction-gold' : ''
                 }`}
@@ -91,7 +103,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                   className={`font-medium hover:text-construction-gold transition-colors ${
                     location.pathname === link.href ? 'text-construction-gold' : ''
                   }`}
@@ -101,7 +113,7 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
               ))}
               <Link
                 to="/kontakt"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
                 className="btn-secondary text-center mt-2"
               >
                 Na Kontaktoni

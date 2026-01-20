@@ -1,4 +1,4 @@
-import { Building2, Hammer, BrickWall, Droplets, Paintbrush, Home, Key } from "lucide-react";
+import { Building2, Hammer, BrickWall, Droplets, Paintbrush, Home } from "lucide-react";
 
 const services = [
   {
@@ -30,11 +30,6 @@ const services = [
     icon: Hammer,
     title: "Rifinitura & punime të brendshme",
     description: "Rifinitura dhe punime të brendshme me cilësi të lartë."
-  },
-  {
-    icon: Key,
-    title: "Projekte 'çelësa në dorë'",
-    description: "Nga themeli deri në dorëzim - projekt i plotë pa shqetësime."
   }
 ];
 

@@ -179,7 +179,7 @@ const Gallery = ({ images }: GalleryProps) => {
           <img
             src={modalImage}
             alt="Gallery image"
-            className="max-w-full max-h-[90vh] object-contain"
+            className="max-w-[85vw] max-h-[75vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
