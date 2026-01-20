@@ -1,4 +1,5 @@
-import { HardHat, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Instagram } from "lucide-react";
+import logoLuna from "@/assets/logo-luna.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,18 +10,15 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
-                <HardHat className="w-6 h-6 text-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-lg leading-tight">
-                  Luna Group
-                </span>
-                <span className="text-xs text-primary-foreground/60 uppercase tracking-wider">
-                  Construction
-                </span>
-              </div>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="inline-block mb-4"
+            >
+              <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
             </a>
             <p className="text-primary-foreground/70 max-w-md mb-6">
               Ndërtime shtëpish dhe vilash nga themeli deri në çelës. 
@@ -64,13 +62,23 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-bold mb-4">Kontakt</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-primary-foreground/70">
-                <Phone className="w-4 h-4 text-construction-gold" />
-                <span>+355 69 123 4567</span>
+              <li>
+                <a href="tel:+355683371815" className="flex items-center gap-3 text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                  <Phone className="w-4 h-4 text-construction-gold" />
+                  <span>068 337 1815</span>
+                </a>
               </li>
-              <li className="flex items-center gap-3 text-primary-foreground/70">
-                <Mail className="w-4 h-4 text-construction-gold" />
-                <span>info@lunagroup.al</span>
+              <li>
+                <a href="https://wa.me/355683371815" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                  <MessageCircle className="w-4 h-4 text-construction-gold" />
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/luna.grupconstruction/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-foreground/70 hover:text-construction-gold transition-colors">
+                  <Instagram className="w-4 h-4 text-construction-gold" />
+                  <span>Instagram</span>
+                </a>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-construction-gold" />

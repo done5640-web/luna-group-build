@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send, Instagram } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ const Contact = () => {
             {/* Contact Details */}
             <div className="space-y-6 mb-8">
               <a
-                href="tel:+355691234567"
+                href="tel:+355683371815"
                 className="flex items-center gap-4 p-4 rounded-xl bg-muted hover:bg-muted/80 transition-colors group"
               >
                 <div className="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -47,12 +47,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Telefon</div>
-                  <div className="font-semibold">+355 69 123 4567</div>
+                  <div className="font-semibold">068 337 1815</div>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/355691234567"
+                href="https://wa.me/355683371815"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-muted hover:bg-muted/80 transition-colors group"
@@ -67,15 +67,17 @@ const Contact = () => {
               </a>
 
               <a
-                href="mailto:info@lunagroup.al"
+                href="https://www.instagram.com/luna.grupconstruction/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-muted hover:bg-muted/80 transition-colors group"
               >
                 <div className="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-5 h-5 text-foreground" />
+                  <Instagram className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="font-semibold">info@lunagroup.al</div>
+                  <div className="text-sm text-muted-foreground">Instagram</div>
+                  <div className="font-semibold">@luna.grupconstruction</div>
                 </div>
               </a>
 

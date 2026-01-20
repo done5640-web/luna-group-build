@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -16,37 +15,27 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import whatsapp1 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.16 (1).jpeg";
+import whatsapp2 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.16 (2).jpeg";
+import whatsapp3 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.16 (3).jpeg";
+import whatsapp4 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.16.jpeg";
+import whatsapp5 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (1).jpeg";
+import whatsapp6 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (2).jpeg";
+import whatsapp7 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (3).jpeg";
+import whatsapp8 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (4).jpeg";
+import whatsapp9 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (5).jpeg";
+import whatsapp10 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17.jpeg";
 
-const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+const galleryImages = [
+  gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
+  whatsapp1, whatsapp2, whatsapp3, whatsapp4, whatsapp5,
+  whatsapp6, whatsapp7, whatsapp8, whatsapp9, whatsapp10
+];
 
 const Index = () => {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    // Check for saved theme preference or system preference
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    if (!isDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header isDark={isDark} toggleTheme={toggleTheme} />
+      <Header isDark={false} toggleTheme={() => {}} />
       <main>
         <Hero />
         <Services />

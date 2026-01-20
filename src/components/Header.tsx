@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, HardHat, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoLuna from "@/assets/logo-luna.png";
 
 interface HeaderProps {
   isDark: boolean;
@@ -37,18 +38,15 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
       <div className="container-custom section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
-              <HardHat className="w-6 h-6 text-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-lg leading-tight">
-                Luna Group
-              </span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">
-                Construction
-              </span>
-            </div>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-3"
+          >
+            <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -66,14 +64,6 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-lg border border-border flex items-center justify-center hover:bg-muted transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
             <a
               href="#kontakt"
               className="hidden sm:inline-flex btn-secondary text-sm"
