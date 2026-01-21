@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-custom section-padding !pb-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link
@@ -18,7 +18,7 @@ const Footer = () => {
               <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 max-w-md mb-6">
-              Ndërtime shtëpish dhe vilash nga themeli deri në çelës. 
+              Ndërtime shtëpish dhe vilash nga themeli deri në çelës.
               Cilësi, korrektësi dhe besim.
             </p>
           </div>
@@ -52,6 +52,27 @@ const Footer = () => {
                   Kontakt
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h4 className="font-heading font-bold mb-4">Zonë Shërbimi</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="text-primary-foreground/70">Vlorë</li>
+              <li className="text-primary-foreground/70">Gjirokastër</li>
+              <li className="text-primary-foreground/70">Sarandë</li>
+              <li className="text-primary-foreground/70">Himarë</li>
+              <li className="text-primary-foreground/70">Tepelenë</li>
+              <li className="text-primary-foreground/70">Përmet</li>
+              <li className="text-primary-foreground/70">Delvinë</li>
+              <li className="text-primary-foreground/70">Konispol</li>
+              <li className="text-primary-foreground/70">Memaliaj</li>
+              <li className="text-primary-foreground/70">Selenicë</li>
+              <li className="text-primary-foreground/70">Këlcyrë</li>
+              <li className="text-primary-foreground/70">Libohovë</li>
+              <li className="text-primary-foreground/70">Finiq</li>
+              <li className="text-primary-foreground/70">Poliçan</li>
             </ul>
           </div>
 

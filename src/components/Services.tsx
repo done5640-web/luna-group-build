@@ -51,7 +51,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
             <div
               key={service.title}
@@ -69,6 +69,35 @@ const Services = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Pricing & Permits Section */}
+        <div className="max-w-3xl mx-auto mt-12">
+          <div className="bg-construction-gold/10 border-2 border-construction-gold rounded-2xl p-8">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">
+                Informacion i Rëndësishëm
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-background rounded-xl p-6">
+                <h4 className="font-heading font-bold text-lg mb-2 text-construction-gold">
+                  Leje Ndërtimi
+                </h4>
+                <p className="text-muted-foreground">
+                  Merr përsipër lejen e ndërtimit për projektin tuaj.
+                </p>
+              </div>
+              <div className="bg-background rounded-xl p-6">
+                <h4 className="font-heading font-bold text-lg mb-2 text-construction-gold">
+                  Çmimi
+                </h4>
+                <p className="text-muted-foreground">
+                  <span className="text-2xl font-bold text-foreground">400€</span> për metër katror
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

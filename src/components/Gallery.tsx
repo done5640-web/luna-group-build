@@ -16,6 +16,10 @@ const Gallery = ({ images }: GalleryProps) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
+  const isVideo = (src: string) => {
+    return src.toLowerCase().match(/\.(mp4|mov|webm|ogg)$/);
+  };
+
   const openModal = (src: string) => {
     setModalImage(src);
     setModalOpen(true);
@@ -112,11 +116,20 @@ const Gallery = ({ images }: GalleryProps) => {
                     className="relative aspect-[4/3] overflow-hidden rounded-xl group cursor-pointer"
                     onClick={() => openModal(src)}
                   >
-                    <img
-                      src={src}
-                      alt={captions[index] || `Projekt ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+                    {isVideo(src) ? (
+                      <video
+                        src={src}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={src}
+                        alt={captions[index] || `Projekt ${index + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
                       <p className="font-medium text-sm">
@@ -163,7 +176,7 @@ const Gallery = ({ images }: GalleryProps) => {
         </div>
       </div>
 
-      {/* Image Modal */}
+      {/* Image/Video Modal */}
       {modalOpen && (
         <div
           className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
@@ -176,12 +189,22 @@ const Gallery = ({ images }: GalleryProps) => {
           >
             <X className="w-6 h-6 text-white" />
           </button>
-          <img
-            src={modalImage}
-            alt="Gallery image"
-            className="max-w-[85vw] max-h-[75vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {isVideo(modalImage) ? (
+            <video
+              src={modalImage}
+              controls
+              autoPlay
+              className="max-w-[85vw] max-h-[75vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            <img
+              src={modalImage}
+              alt="Gallery image"
+              className="max-w-[85vw] max-h-[75vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </div>
       )}
     </section>

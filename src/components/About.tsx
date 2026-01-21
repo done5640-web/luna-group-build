@@ -1,8 +1,7 @@
 import { Building2, Target, Users } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
+import gallery1 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (1).jpeg";
+import gallery2 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (2).jpeg";
+import gallery3 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (3).jpeg";
 
 const About = () => {
   return (
