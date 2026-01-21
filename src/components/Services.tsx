@@ -95,6 +95,9 @@ const Services = () => {
                 <p className="text-muted-foreground">
                   <span className="text-2xl font-bold text-foreground">400€</span> për metër katror
                 </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  + Materialet e përfshira
+                </p>
               </div>
             </div>
           </div>
