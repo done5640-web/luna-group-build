@@ -78,15 +78,6 @@ const Gallery = ({ images }: GalleryProps) => {
     };
   }, [modalOpen]);
 
-  const captions = [
-    "Punime themeli",
-    "Derdhje betoni",
-    "Ndërtim strukture",
-    "Muraturë profesionale",
-    "Vilë në ndërtim",
-    "Projekt i përfunduar"
-  ];
-
   return (
     <section id="punimet" className="section-padding">
       <div className="container-custom">
@@ -126,16 +117,10 @@ const Gallery = ({ images }: GalleryProps) => {
                     ) : (
                       <img
                         src={src}
-                        alt={captions[index] || `Projekt ${index + 1}`}
+                        alt="Luna Group Construction Project"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform">
-                      <p className="font-medium text-sm">
-                        {captions[index] || `Projekt ${index + 1}`}
-                      </p>
-                    </div>
                   </div>
                 </div>
               ))}
