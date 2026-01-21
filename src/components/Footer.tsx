@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-construction-gold" />
-                <span>Tiranë, Shqipëri</span>
+                <span>Fier, Shqipëri</span>
               </li>
             </ul>
           </div>

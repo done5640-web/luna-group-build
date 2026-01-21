@@ -87,7 +87,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Adresa</div>
-                  <div className="font-semibold">Tiranë, Shqipëri</div>
+                  <div className="font-semibold">Fier, Shqipëri</div>
                 </div>
               </div>
             </div>
