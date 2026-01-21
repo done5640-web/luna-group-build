@@ -15,7 +15,7 @@ const Footer = () => {
               to="/"
               className="inline-block mb-4"
             >
-              <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
+              <img src={logoLuna} alt="Luna Grup Construction" className="h-12 w-auto" />
             </Link>
             <p className="text-primary-foreground/70 max-w-md mb-6">
               Ndërtime shtëpish dhe vilash nga themeli deri në çelës.
@@ -109,7 +109,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Luna Group Construction. Të gjitha të drejtat e rezervuara.
+            © {currentYear} Luna Grup Construction. Të gjitha të drejtat e rezervuara.
           </p>
           <p className="text-primary-foreground/60 text-sm">
             Ndërtuar me dashuri në Shqipëri 🇦🇱

@@ -117,7 +117,7 @@ const Gallery = ({ images }: GalleryProps) => {
                     ) : (
                       <img
                         src={src}
-                        alt="Luna Group Construction Project"
+                        alt="Luna Grup Construction Project"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     )}

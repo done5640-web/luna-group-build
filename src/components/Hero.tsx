@@ -23,7 +23,7 @@ const Hero = () => {
           {/* Company Name */}
           <div className="mb-4 animate-fade-up">
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-construction-gold">
-              Luna Group Construction
+              Luna Grup Construction
             </h2>
           </div>
 

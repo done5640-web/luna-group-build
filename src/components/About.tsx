@@ -14,10 +14,10 @@ const About = () => {
               Rreth Nesh
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mt-4 mb-6">
-              Luna Group Construction
+              Luna Grup Construction
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Luna Group Construction është një kompani ndërtimi e fokusuar në ndërtimin e 
+              Luna Grup Construction është një kompani ndërtimi e fokusuar në ndërtimin e 
               shtëpive dhe vilave. Ne ofrojmë punë cilësore, korrektësi dhe besim, duke 
               ndjekur çdo projekt nga themeli deri në dorëzim.
             </p>
@@ -67,14 +67,14 @@ const About = () => {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                 <img
                   src={gallery1}
-                  alt="Luna Group Construction Project"
+                  alt="Luna Grup Construction Project"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src={gallery2}
-                  alt="Luna Group Construction Project"
+                  alt="Luna Grup Construction Project"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -83,7 +83,7 @@ const About = () => {
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src={gallery3}
-                  alt="Luna Group Construction Project"
+                  alt="Luna Grup Construction Project"
                   className="w-full h-full object-cover"
                 />
               </div>

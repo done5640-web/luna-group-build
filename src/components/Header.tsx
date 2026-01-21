@@ -61,9 +61,9 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
             onClick={handleLogoClick}
             className="flex items-center gap-3"
           >
-            <img src={logoLuna} alt="Luna Group Construction" className="h-12 w-auto" />
+            <img src={logoLuna} alt="Luna Grup Construction" className="h-12 w-auto" />
             <div className="flex flex-col leading-tight">
-              <span className="font-heading font-bold text-lg text-foreground">Luna Group</span>
+              <span className="font-heading font-bold text-lg text-foreground">Luna Grup</span>
               <span className="font-heading font-bold text-sm text-construction-gold">Construction</span>
             </div>
           </Link>
