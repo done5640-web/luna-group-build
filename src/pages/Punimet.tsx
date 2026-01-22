@@ -15,11 +15,18 @@ import whatsapp8 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (4).jpeg";
 import whatsapp9 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (5).jpeg";
 import whatsapp10 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17.jpeg";
 import whatsapp11 from "@/assets/WhatsApp Image 2026-01-21 at 13.28.11.jpeg";
+import construction1 from "@/assets/brett-jordan-jEP4vsHrSM8-unsplash.jpg";
+import construction2 from "@/assets/gennifer-miller-Mb_r0CIDFh8-unsplash.jpg";
+import construction3 from "@/assets/brett-jordan-pE9fOOJy5rA-unsplash.jpg";
+import construction4 from "@/assets/jean-luc-benazet-oOvzE2L-n1A-unsplash.jpg";
+import construction5 from "@/assets/pexels-ian-panelo-4567378.jpg";
+import construction6 from "@/assets/pexels-ian-panelo-4567377.jpg";
 
 const galleryImages = [
   whatsapp1, whatsapp2, whatsapp3, whatsapp4, whatsapp5,
   whatsapp6, whatsapp7, whatsapp8, whatsapp9, whatsapp10,
-  whatsapp11
+  whatsapp11, construction1, construction2, construction3,
+  construction4, construction5, construction6
 ];
 
 const Punimet = () => {
