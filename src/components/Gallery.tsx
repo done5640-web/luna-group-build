@@ -110,9 +110,10 @@ const Gallery = ({ images }: GalleryProps) => {
                     {isVideo(src) ? (
                       <video
                         src={src}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 bg-muted"
                         muted
                         playsInline
+                        preload="metadata"
                       />
                     ) : (
                       <img
