@@ -15,12 +15,11 @@ import whatsapp8 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (4).jpeg";
 import whatsapp9 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17 (5).jpeg";
 import whatsapp10 from "@/assets/WhatsApp Image 2026-01-20 at 20.18.17.jpeg";
 import whatsapp11 from "@/assets/WhatsApp Image 2026-01-21 at 13.28.11.jpeg";
-import video1 from "@/assets/WhatsApp Video 2026-01-21 at 17.33.46 (online-video-cutter.com).mp4";
 
 const galleryImages = [
   whatsapp1, whatsapp2, whatsapp3, whatsapp4, whatsapp5,
   whatsapp6, whatsapp7, whatsapp8, whatsapp9, whatsapp10,
-  whatsapp11, video1
+  whatsapp11
 ];
 
 const Punimet = () => {
